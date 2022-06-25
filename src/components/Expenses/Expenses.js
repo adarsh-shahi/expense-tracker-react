@@ -3,6 +3,7 @@ import Card from '../UI/Card'
 import ExpensesFilter from './ExpensesFilter'
 import { useState } from 'react'
 import ExpensesList from './ExpensesList'
+import ExpensesChart from './ExpensesChart'
 
 function Expenses(props) {
 
@@ -21,6 +22,7 @@ function Expenses(props) {
         <Card className="expenses">
             <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler}/>
             {/* title="ps5 "  we could have used hardcored value*/ }
+            <ExpensesChart expenses={filteredExpenses}/>
             <ExpensesList filteredItems={filteredExpenses}/>
             
         </Card>

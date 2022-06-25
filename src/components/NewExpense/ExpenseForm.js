@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './ExpenseForm.css'
 
 const ExpenseForm = (props) => {
@@ -30,6 +30,7 @@ const ExpenseForm = (props) => {
         setEnteredDate('')
         setEnteredAmount('')
     }
+
 
     return (
         <form onSubmit={submitHandler}>
