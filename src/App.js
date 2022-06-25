@@ -24,10 +24,15 @@ function App() {
       date: new Date(2021, 5, 12), 
     },
   ];
+
+  const onAddDataHandler = (newData) => {
+    expenses.push(newData)
+    console.log(expenses);
+  }
     
   return (
     <div>
-      <NewExpense/>
+      <NewExpense onAddData={onAddDataHandler}/>
       <Expenses items={expenses} />
     </div>
   );
