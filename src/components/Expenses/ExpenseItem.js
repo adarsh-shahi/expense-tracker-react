@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './ExpenseItem.css'
 import ExpenseDate from './ExpenseDate'
 import Card from '../UI/Card'
@@ -18,6 +17,7 @@ function ExpenseItem(props){  // react component must have one root return eleme
     // }
 
     return(   // in {} you can run js expressions we have added dynamic values here
+        <li>
         <Card className='expense-item'>
             <ExpenseDate date={props.date}/>
             <div className='expense-item__description'>
@@ -26,6 +26,7 @@ function ExpenseItem(props){  // react component must have one root return eleme
             </div>
             {/* <button onClick={clickHandler}>Change Title</button> */}
         </Card> 
+        </li>
     )
 }
 
